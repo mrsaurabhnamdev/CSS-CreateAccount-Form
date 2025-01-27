@@ -21,7 +21,7 @@
                 text-align: center;
                 color: #fff;
                 font-size: 2em;
-                text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.5)  ;
+                text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.5);
                 border-bottom: 2px solid black;
                 border-top-left-radius: 5px;
                 border-top-right-radius: 5px;
@@ -29,9 +29,10 @@
             }
 
             .myform > div > input{
-                width: 100%;
+                width: 90%;
                 height: 38px;
                 border-radius: 20px;
+                padding-left: 50px;
                 display: block;
                 margin: 10px auto;
                 background-image: -webkit-linear-gradient(top,#b1b1b1,#d7d7d7);
@@ -55,6 +56,45 @@
                outline: none;
             }
         
+            .tnc a{
+                color: green;
+            }
+
+            input[type="submit"]{
+                width: 250px;
+                height: 48px;
+                border-radius: 48px;
+                border: none;
+                float: right;
+                background-image: -webkit-linear-gradient(top,green,#307c00);
+                color:#fff;
+                font-size: 1.2em;
+                display: block;
+                margin-right:20px ;
+                text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.5);
+                box-shadow: 0px -1px 0px 0px #b4bd2c;
+            }
+            
+            .inputvalues .common{
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            
+            .inputvalues input:first-child{
+                background-image: url("images/1.png");
+            }
+            .inputvalues input:nth-child(2){
+                background-image: url("images/2.png");
+            }
+            .inputvalues input:nth-child(3){
+                background-image: url("images/3.png");
+            }
+            .inputvalues input:nth-child(4){
+                background-image: url("images/4.png");
+            }
+
+
+
 
         </style>
     </head>
@@ -62,15 +102,16 @@
         <form action="" class="myform">
             <div class="createACC">Create an Account</div>
             <div class="inputvalues">
-                <input type="text" name="fname" id="" placeholder="Name"  value="">
-                <input type="number" name="phonenumber" id="" value="" placeholder="Phone Number">
-                <input type="email" name="" id="email" value="" placeholder="Email">
-                <input type="password" name="" id="password" value="" placeholder="Password">
+                <input class="common" type="text" name="fname" id="" placeholder="Name"  value="">
+                <input class="common" type="number" name="phonenumber" id="" value="" placeholder="Phone Number">
+                <input class="common" type="email" name="" id="email" value="" placeholder="Email">
+                <input class="common" type="password" name="" id="password" value="" placeholder="Password">
                 <p class="tnc"> 
                     <input type="checkbox" name="tnc" id="" value="agree">
-                     i agree to the Terms, conditions and privacy Policy.
+                     i agree to the <a href="#">Terms and conditions</a> and <a href="#">privacy Policy.</a>
                 </p>
             </div>
+            <input type="submit" value="Create Account" name="submit">
         </form>
     </body>
 </html>
